@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int x;
+    int y;
+    int z;
+    
+    cout<<"podaj pierwsza liczbe calkowita x"<<endl;
+    cin >> x;
+    
+    cout<<"podaj droga liczbe calkowita y"<<endl;
+    cin >> y;
+    
+    cout<<"podaj trzecia liczbe calkowita z"<<endl;
+    cin >> z;
+    
+    if(x > y && x > z){
+        cout<<"Największa liczba to "<< x <<endl;
+    }
+    
+    else if(z > y && z > x){
+        cout<<"Największa liczba to "<< z <<endl;
+    }
+    
+    else if(y > x && y > z){
+        cout<<"Największa liczba to "<< y <<endl;
+    }
+    
+    
+    
+    
+    return 0;
+}

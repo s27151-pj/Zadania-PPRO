@@ -1,25 +1,52 @@
-int miesiac = 0;
+#include <iostream>
+using namespace std;
 
-    switch (day) {
-    case 1:
-        cout << "Monday";
-        break;
-    case 2:
-        cout << "Tuesday";
-        break;
-    case 3:
-        cout << "Wednesday";
-        break;
-    case 4:
-        cout << "Thursday";
-        break;
-    case 5:
-        cout << "Friday";
-        break;
-    case 6:
-        cout << "Saturday";
-        break;
-    case 7:
-        cout << "Sunday";
-        break;
-    }
+int main()
+{
+    int miesiac = 0;
+    cout << "Podaj miesiąc od [1-12]: ";
+    cin >> miesiac;
+
+        switch (miesiac) {
+        case 1:
+            cout << "Styczen 31 dni, Pochmurno";
+            break;
+        case 2:
+            cout << "Luty 28 lub 29 dni, Pochmurno";
+            break;
+        case 3:
+            cout << "Marzec 31 dni, Pochmurno";
+            break;
+        case 4:
+            cout << "Kwiecien 30 dni, Slonecznie";
+            break;
+        case 5:
+            cout << "Maj 31 dni, Slonecznie";
+            break;
+        case 6:
+            cout << "Czerwiec 30 dni, Slonecznie";
+            break;
+        case 7:
+            cout << "Lipiec 31 dni, Slonecznie";
+            break;
+        case 8:
+            cout << "Sierpien, 31 dni, Slonecznie";
+            break;
+        case 9:
+            cout << "Wrzesen, 30 dni, Slonecznie";
+            break;
+        case 10:
+            cout << "Pazdziernik 31 dni, Pochmurno";
+            break;
+        case 11:
+            cout << "listopad 30 dni, Pochmurno";
+            break;
+        case 12:
+            cout << "Grodzien 31 dni, Pochmurno";
+            break;
+        default:
+            cout << "Liczba z poza przedzialu";
+
+        }
+    
+}

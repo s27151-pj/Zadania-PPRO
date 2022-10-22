@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int x, y; //liczba kawałków pizzy y
+	//liczba uczestników x
+
+	cout << "Podaj liczbe kawalkow pizzy"<< endl;
+	cin >> y;
+	cout << "Podaj liczbe uczestnikow" << endl;
+	cin >> x;
+
+	int z = y % x;
+	cout << "Kawalki dla goscia: "<< (y - z) / x << endl;
+
+	cout << "Pozostale kawalki dla organizatora: " << z;
+
+}

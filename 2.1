@@ -5,12 +5,15 @@ int main()
 {
     int n = 0; //liczba powtozen
     int wynik = 0;
+    int wynik2 = 0;
     int suma = 0;
     
     
 
     cout << "Podaj liczbe n : ";
     cin >> n;
+    cout << endl;
+    
 
     for (int i = 1; i <= n; i++) {
         
@@ -29,7 +32,16 @@ int main()
         cout << " = "<< wynik << endl;
         
     }
-        
+    cout << endl;
+    cout << "Suma szeregu: ";
     
-    cout << "Suma szeregu: " << suma;
+    for (int i = 1; i <= n; i++) {
+         wynik2 += i;
+         cout << wynik2;
+         if ( i < n ){
+             cout << " + ";
+         }
+    }
+    
+    cout << " = " << suma;
 }

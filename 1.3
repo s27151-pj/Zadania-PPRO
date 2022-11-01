@@ -5,17 +5,24 @@ using namespace std;
 int main()
 {
     int numb;
-    cout<<"Wpisz liczbe calkowita"<<endl;
+    
+    cout << "Wpisz liczbe calkowita: ";
     cin >> numb;
-    if (numb % 2) {
+    cout << endl;
+    
+    if (numb == 0) {
+        cout << "liczba 0"<< endl;
+        return 0;
+    }
+    
+    if (numb % 2 == 0) {
         cout << "Wpisales liczbe pazysta" << endl;
         return 0;
     }
-    if (numb == 0) {
-        cout << "liczba 0"<< endl;
-    }
+    
     else {
         cout << "Wpisales liczbe niepazysta"<< endl;
     }
+    
     return 0;
 }

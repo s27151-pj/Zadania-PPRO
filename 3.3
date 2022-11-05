@@ -1,0 +1,51 @@
+#include <iostream>
+#include<cmath>
+using namespace std;
+
+
+
+int main()
+{
+	cout << "ROWNANIE KWADRATOWE" << endl;
+	cout << "Ax^2 + Bx + C" << endl << endl;
+
+	int A = 0;
+	int B = 0;
+	int C = 0;
+
+	cout << "Wprowadz A = ";
+	cin >> A;
+	cout << endl;
+
+	cout << "Wprowadz B = ";
+	cin >> B;
+	cout << endl;
+
+	cout << "Wprowadz C = ";
+	cin >> C;
+	cout << endl;
+
+	if (A == 0) {
+		cout << "A funkcji kwadratowej niemoze byc rowne 0" << endl << "Uruchom program jeszcze raz";
+		return 0;
+	}
+	else;
+		cout << A << "x^2 + " << B << "x + " << C << endl << endl;
+
+		int delta = 0;
+
+		delta = (B * B) - (4 * A * C);
+		int pdelta = sqrt(delta);
+
+		int x1, x2;
+
+		x1 = (-B - sqrt(delta)) / (2 * A);
+
+		x2 = (-B + sqrt(delta)) / (2 * A);
+
+		cout << "pierwszy pierwiastek to = " << x1 << endl << endl;
+		cout << "drogi pierwiastek to = " << x2 << endl << endl;
+
+
+}
+

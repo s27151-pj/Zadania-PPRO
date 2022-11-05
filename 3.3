@@ -37,14 +37,23 @@ int main()
 		delta = (B * B) - (4 * A * C);
 		int pdelta = sqrt(delta);
 
-		int x1, x2;
+		if (delta > 0) {
+			int x1, x2;
 
-		x1 = (-B - sqrt(delta)) / (2 * A);
+			x1 = (-B - sqrt(delta)) / (2 * A);
 
-		x2 = (-B + sqrt(delta)) / (2 * A);
-
-		cout << "pierwszy pierwiastek to = " << x1 << endl << endl;
-		cout << "drogi pierwiastek to = " << x2 << endl << endl;
+			x2 = (-B + sqrt(delta)) / (2 * A);
+			if (delta == 0) {
+				int x0 = -B / (2 * A);
+				cout << "Pierwiastek wynosi" << x0 << endl << endl;
+			}
+			else;
+				cout << "delta wynosi" << delta << endl << endl;
+				cout << "pierwszy pierwiastek to = " << x1 << endl << endl;
+				cout << "drogi pierwiastek to = " << x2 << endl << endl;
+		}
+		else;
+		cout << "Rownaie nie ma pierwiastkow" << endl << endl;
 
 
 }

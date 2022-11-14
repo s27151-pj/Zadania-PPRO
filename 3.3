@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
 	cout << "ROWNANIE KWADRATOWE" << endl;
-	cout << "Ax^2 + Bx + C" << endl << endl;
+	cout << "Ax² + Bx + C" << endl << endl;
 
 	int A = 0;
 	int B = 0;
@@ -30,8 +30,23 @@ int main()
 		return 0;
 	}
 	else;
-		cout << A << "x^2 + " << B << "x + " << C << endl << endl;
-
+		cout << A; 
+		if (B < 0){
+		    cout << "x² " << B; 
+		}
+		if (B >= 0){
+		    cout << "x² + " << B;
+		}
+		    
+		if (C < 0){
+		    cout << "x " << C; 
+		}
+		if (C >= 0){
+		    cout << "x + " << C; 
+		}
+		
+		cout << endl << endl;
+		
 		int delta = 0;
 
 		delta = (B * B) - (4 * A * C);
@@ -45,16 +60,16 @@ int main()
 			x2 = (-B + sqrt(delta)) / (2 * A);
 			if (delta == 0) {
 				int x0 = -B / (2 * A);
-				cout << "Pierwiastek wynosi" << x0 << endl << endl;
+				cout << "Pierwiastek wynosi = " << x0 << endl << endl;
 			}
 			else;
-				cout << "delta wynosi" << delta << endl << endl;
+				cout << "delta wynosi = " << delta << endl << endl;
 				cout << "pierwszy pierwiastek to = " << x1 << endl << endl;
 				cout << "drogi pierwiastek to = " << x2 << endl << endl;
+		    return 0;
 		}
 		else;
 		cout << "Rownaie nie ma pierwiastkow" << endl << endl;
 
 
 }
-

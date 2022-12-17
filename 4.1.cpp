@@ -1,4 +1,3 @@
-
 #include <iostream>
 
 using namespace std;
@@ -6,22 +5,33 @@ using namespace std;
 
 int main()
 {
-    int x;
-    int y;
-    int tbl[] = {0};
-    cout << "Podaj dlugosc tablicy:";
-    cin >> x;
-    cout << endl;
+	int table[100];
+	int x;
+	cout << "Podaj dlugosc tablicy: ";
+	cin >> x;
+	cout << endl;
+	for (int t = 0; t < x; t++) {
 
-    for (int i = 0; i < x; i++) {
-        cout << "Podaj liczbe znajdujaca sie na pozycji :" << i + 1 << endl;
-        cin >> tbl[i];
-    }
+		cout << "Podaj liczbe znajdujaca sie na pozycji :" << t + 1 << endl;
+		cin >> table[t];
+		cout << endl;
+	}
 
+	for (int t = 0; t < x; t++) {
 
-  
-    for (int i = 0; i < x; i++) {
-        cout << tbl[i];
-    }
-    return 0;
+		cout << table[t];
+
+	}
+	cout << endl << endl;
+
+	int a = 0;
+	int b = 0;
+	for (int t = 0; t < x; t++) {
+
+		a = table[t];
+			if (a >= b) {
+				b = a;
+			}			
+	}
+	cout << "największy element tej tablicy to : " << b;
 }

@@ -16,7 +16,7 @@ int main()
 		cin >> table[t];
 		cout << endl;
 	}
-
+    cout << "Twoja tablica: ";
 	for (int t = 0; t < x; t++) {
 
 		cout << table[t];

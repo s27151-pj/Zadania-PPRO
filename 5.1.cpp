@@ -28,16 +28,18 @@ int main()
     
     int a = 0;
 	int b = 0;
+	int c = 0;
 	
 	for (int t = 0; t < vec.size(); t++) {
 
 		a = vec[t];
 		if (a >= b) {
-		    
+		    c = t;
 			b = a;
 		}
 	}
-	cout << "największy element tego wektora to: " << b;
+	cout << "Wartość elementu maksymalnego wektora: " << b << endl;
+	cout << "Numer indeksu elementu maksymalnego: " << c+1;
     
     
     

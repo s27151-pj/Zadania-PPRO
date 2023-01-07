@@ -48,14 +48,18 @@ int main()
 	
 	        cout << arr[i-1] << "    ";
 
-	    if ( (i % 2) == 0 )
+	    if ( (i % 2) == 0 && i != (x - 1))
 
 	        cout << arr[i+1] << "    ";
+	        
+	    if (x - 1 == i && (x % 2) != 0 )
+	    
+	        cout << "     " << arr[i] << "    ";
+	   
         b++;
         if ((b % 2) == 0)
 	        cout << endl;
 	}
 	    
-
     return 0;
 }

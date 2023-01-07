@@ -38,10 +38,9 @@ int main()
 			b = a;
 		}
 	}
+	
 	cout << "Wartość elementu maksymalnego wektora: " << b << endl;
 	cout << "Numer indeksu elementu maksymalnego: " << c+1;
-    
-    
     
     return 0;
 }

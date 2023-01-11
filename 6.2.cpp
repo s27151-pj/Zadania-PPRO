@@ -24,12 +24,18 @@ int main()
         cin >> k[i];
         cout << "Podaj ocene z jezyka polskiego : ";
         cin >> l[i];
-        
-        
-        
-        
     } 
-   
+
+    int n;
+    cout << "Podaj liczbe zapytan : ";
+    cin >> n;
+    
+    for (int i = 1; i <= n; i++){
+        
+        
+        
+        
+    }
     
     
     

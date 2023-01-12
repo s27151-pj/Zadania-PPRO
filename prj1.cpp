@@ -7,6 +7,7 @@ using namespace std;
 string Plansza[] = { "1","2","3","4","5","6","7","8","9"};
 int w = 0;
 int x;
+string c;
 
 void plansza()
 {
@@ -23,11 +24,28 @@ void plansza()
 }
 void status()
 {
-    if ( Plansza[1] == "X" && Plansza[2] == "X" && Plansza[3] == "X" ){
-        system("clear");
-        w = 1;
-    }
-        
+    for (int i = 1; i < 3; i++){
+        if (i%2 != 0){
+            c = "X";
+        }
+        if (i%2 == 0){
+            c = "Y";
+        }    
+
+        if ( Plansza[0] == c && Plansza[1] == c && Plansza[2] == c 
+        || Plansza[3] == c && Plansza[4] == c && Plansza[5] == c
+        || Plansza[6] == c && Plansza[7] == c && Plansza[8] == c
+        || Plansza[0] == c && Plansza[3] == c && Plansza[6] == c 
+        || Plansza[1] == c && Plansza[4] == c && Plansza[7] == c
+        || Plansza[2] == c && Plansza[5] == c && Plansza[8] == c
+        || Plansza[0] == c && Plansza[4] == c && Plansza[8] == c
+        || Plansza[2] == c && Plansza[4] == c && Plansza[6] == c
+        ){
+            system("clear");
+            if (c == "X") w = 1;
+            if (c == "Y") w = 2;
+        }
+    }    
 }
 
 
@@ -43,25 +61,31 @@ int main()
 
 
     //system("clear");
-    int b = 0;
+    int b = 1;
     for (int i = 0; i < 9; i++){
         
-        if (b%2 == 0)
-        cout << "Prosze podac pole [1..9] dla X: ";
-        cin >> x;
-        Plansza[x-1] = "X";
-        
-        if (b%2 != 0)
-        cout << "Prosze podac pole [1..9] dla Y: ";
-        cin >> x;
-        Plansza[x-1] = "Y";
-        
+        if (b%2 == 0){
+            cout << "Prosze podac pole [1..9] dla Y: ";
+            cin >> x;
+            Plansza[x-1] = "Y";
+        }
+        if (b%2 != 0){
+            cout << "Prosze podac pole [1..9] dla X: ";
+            cin >> x;
+            Plansza[x-1] = "X";
+        }
         b++;
         system("clear");
         plansza();
         status();
         if (w == 1){
+            plansza();
             cout << "wygral X";
+            return 0;
+        }
+        if (w == 2){
+            plansza();
+            cout << "wygral Y";
             return 0;
         }
             

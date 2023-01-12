@@ -4,8 +4,8 @@ using namespace std;
 
 int main()
 {
-    int x[7]; y[7]; z[7]; k[7]; l[7]; n; b; c;
-    char p[]={"informatyki", "matematyki", "chemii" ,"jez. polskiego"};
+    int x[7], y[7], z[7], k[7], l[7], n, b, c;
+    string p[4]={"informatyki", "matematyki", "chemii" ,"jez. polskiego"};
 
     for (int i = 1; i <= 6; i++){
         
@@ -30,7 +30,13 @@ int main()
         cin >> b;
         cout << "Podaj nr przedmiotu [0..3] : ";
         cin >> c;
-        cout << "Uczen: " << x[b] << "ocena z " << p[c] << 
+        cout << "Uczen: " << x[b] << "ocena z " << p[c] << " : ";
+        
+        if (c==0) cout << y[b];
+        if (c==1) cout << z[b];
+        if (c==2) cout << k[b];
+        if (c==3) cout << l[b];
+        
     }
     
     

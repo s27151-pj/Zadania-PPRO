@@ -11,22 +11,24 @@ int main()
     int variuable;
     string variuable2;
     
-    cout << "Podaj wielkość wektora (liczby studentów): ";
+    cout << "Podaj wielkość wektora (liczba studentów): ";
     cin >> wv;
-    
+    int x = 1;
     while ( vec.size() != wv ) {
         
-        cout << endl << "Podaj numer indeksu: ";
+        cout << endl << "Dane dla: " << x << " Studenta; Podaj numer indeksu: ";
         cin >> variuable;
         vec.push_back(variuable);
         
-        cout << endl << "Podaj imie studenta: ";
+        cout << endl <<"Dane dla: " << x << " Studenta; Podaj imie studenta: ";
         cin >> variuable2;
         imie.push_back(variuable2);
         
-        cout << endl << "Podaj nazwisko studenta: ";
+        cout << endl <<"Dane dla: " << x << " Studenta; Podaj nazwisko studenta: ";
         cin >> variuable2;
         nazwisko.push_back(variuable2);
+        
+        x++;
     }
     
     int temporary;

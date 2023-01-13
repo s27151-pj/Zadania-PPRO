@@ -8,7 +8,7 @@ int w = 0;
 int x;
 string c;
 
-void plansza()
+void plansza() // Wyswietla plansze
 {
     cout << "+---+---+---+" << endl;
     for (int i = 0; i < 9; i++){
@@ -16,7 +16,7 @@ void plansza()
         if ((i+1) % 3 == 0) cout<< "|" << endl << "+---+---+---+" << endl;
     }
 }
-void status()
+void status() // Na bierzaco sprawdza status rozgrywki
 {
     for (int i = 1; i < 3; i++){
         if (i%2 != 0) c = "X";
@@ -41,20 +41,22 @@ int main()
     cout<<"T5. Gra w kolko i krzyzyk"<<endl<<endl;
     plansza();
     cout<<"Gracz 1 to X\nGracz 2 to Y\nZaczyna gracz 1\n";
-    //system("clear");
+    //system("clear"); // Na compilatorze https://www.onlinegdb.com/online_c++_compiler
+    // pozwalala mi ta komenda na czyszczenie ekranu co każdy ruch przez co terminal był bardziej przejzysty
+    // natomiast w CLion niedziala tak samo wiec musialem z tego zrezygnowac
     int b = 1;
     for (int i = 0; i < 9; i++){
 
-        if (b%2 == 0){
+        if (b%2 == 0){ // ruch gracza Y
             cout << "Prosze podac pole [1..9] dla Y: ";
             cin >> x;
-            while (Plansza[x-1] == "X" || Plansza[x-1] == "Y"){
+            while (Plansza[x-1] == "X" || Plansza[x-1] == "Y"){ // petla sprawdzajaca czy gracz uzupelnia prawidlowe pole
                 cout << "Pole zostalo juz zajete\nProsze podac pole [1..9] dla Y: ";
                 cin >> x;
             }
-            if (Plansza[x-1] != "X" || Plansza[x-1] != "Y") Plansza[x-1] = "Y";
+            if (Plansza[x-1] != "X" || Plansza[x-1] != "Y") Plansza[x-1] = "Y"; // podpisanie wartosci w tablicy
         }
-        if (b%2 != 0){
+        if (b%2 != 0){ // ruch gracza X
             cout << "Prosze podac pole [1..9] dla X: ";
             cin >> x;
             while (Plansza[x-1] == "X" || Plansza[x-1] == "Y"){
@@ -65,9 +67,9 @@ int main()
         }
         cout << "\n";
         //system("clear");
-        plansza();
+        plansza(); // pobiera nowa plansze
         b++;
-        status();
+        status(); // sprawdza warunki zakonczenia gry
         if (w == 1){
             //plansza();
             cout << "wygral X";
@@ -79,6 +81,6 @@ int main()
             return 0;
         }
     }
-    cout << "Remis";
+    cout << "Remis"; // gdy gra sie nieroztrzygnie zakonczy sie remisem
     return 0;
 }

@@ -2,64 +2,64 @@
 using namespace std;
 
 int main()
-{   
+{
     int x;
-    cout<<"Podaj rozmiar tablicy liczb całkowitych: ";
+    cout<<"Podaj rozmiar tablicy liczb calkowitych: ";
     cin>>x;
- 
+
     int arr[x];
- 
+
     for(int i=0; i<x; i++)
     {
-        cout<<"Podaj element "<<i+1<<" tablicy liczb całkowitych: ";
+        cout<<"Podaj element "<<i+1<<" tablicy liczb calkowitych: ";
         cin>>arr[i];
     }
-    
+
     cout << endl << "Twoja tablica to: ";
-	for (int z = 0; z < x; z++) {
+    for (int z = 0; z < x; z++) {
 
-		cout << arr[z];
-	}
-	cout << endl << "Tablica wejsciowa:" << endl;
-	
-	int a = 0;
-	
-	for(int i = 0; i < x; i++){
-	    
-	    if ( (i % 2) == 0 )
-	
-	        cout << arr[i] << "    ";
+        cout << arr[z];
+    }
+    cout << endl << "Tablica wejsciowa:" << endl;
 
-	    if ( (i % 2) != 0 )
+    int a = 0;
 
-	        cout << arr[i] << "    ";
+    for(int i = 0; i < x; i++){
+
+        if ( (i % 2) == 0 )
+
+            cout << arr[i] << "    ";
+
+        if ( (i % 2) != 0 )
+
+            cout << arr[i] << "    ";
         a++;
         if ((a % 2) == 0)
-	        cout << endl;
-	}
-	
-	cout << endl << "Tablica wejsciowa:" << endl;
-	
-	int b = 0;
-	
-	for(int i = 0; i < x; i++){
-	    
-	    if ( (i % 2) != 0 )
-	
-	        cout << arr[i-1] << "    ";
+            cout << endl;
+    }
 
-	    if ( (i % 2) == 0 && i != (x - 1))
+    cout << endl << "Tablica wejsciowa:" << endl;
 
-	        cout << arr[i+1] << "    ";
-	        
-	    if (x - 1 == i && (x % 2) != 0 )
-	    
-	        cout << "     " << arr[i] << "    ";
-	   
+    int b = 0;
+
+    for(int i = 0; i < x; i++){
+
+        if ( (i % 2) != 0 )
+
+            cout << arr[i-1] << "    ";
+
+        if ( (i % 2) == 0 && i != (x - 1))
+
+            cout << arr[i+1] << "    ";
+
+        if (x - 1 == i && (x % 2) != 0 )
+
+            cout << "     " << arr[i] << "    ";
+
         b++;
         if ((b % 2) == 0)
-	        cout << endl;
-	}
-	    
+            cout << endl;
+    }
+
     return 0;
 }

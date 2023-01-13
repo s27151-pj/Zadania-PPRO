@@ -9,8 +9,8 @@ int main()
     string p[4]={"informatyki", "matematyki", "chemii" ,"jez. polskiego"};
 
     for (int i = 1; i <= 6; i++){
-        
-        cout << "Podaj imię ucznia nr " << i << ": ";
+
+        cout << "Podaj imie ucznia nr " << i << ": ";
         cin >> x[i];
         cout << "Podaj ocene z informatyki : ";
         cin >> y[i];
@@ -20,27 +20,28 @@ int main()
         cin >> k[i];
         cout << "Podaj ocene z jezyka polskiego : ";
         cin >> l[i];
-    } 
+    }
 
     cout << "Podaj liczbe zapytan : ";
     cin >> n;
-    
+
     for (int i = 1; i <= n; i++){
-        
+
         cout << "Podaj nr ucznia [1..6] : ";
         cin >> b;
         cout << "Podaj nr przedmiotu [0..3] : ";
         cin >> c;
         cout << "Uczen: " << x[b] << ", ocena z " << p[c] << " : ";
-        
+
         if (c==0) cout << y[b];
         if (c==1) cout << z[b];
         if (c==2) cout << k[b];
         if (c==3) cout << l[b];
         cout << endl;
     }
-    
-    
-    
+
+
+
     return 0;
 }
+
